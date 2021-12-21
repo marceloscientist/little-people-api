@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/people")
@@ -30,11 +31,11 @@ class PersonController {
         return personService.createPerson(personDTO);
     }
 
-   /* @GetMapping
+    @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public
-    List<Person> listPeople ( ) {
+    List<PersonDTO> listPeople ( ) {
         return personService.listPeople();
     }
-    */
+
 }
